@@ -38,6 +38,6 @@ data_plot_1 <- cbind(data_raw_3_a, "Date_and_Time" = as.POSIXct(paste(data_raw_n
 ## 3rd plot
 c <- plot(y = data_plot_2$Sub_metering_1, x = data_plot_2$Date_and_Time, type = "l", xlab = "", ylab = "'Energy sub metering", ylim = c(0,30), xaxt = 'n')
 axis(1, at = c(1170300000, 1170395000, 1170479000), labels = c("Thu", "Fri", "Sat"))
-lines(y = data_plot_2$Sub_metering_1, x = data_plot_2$Date_and_Time, col = "red")
+lines(y = data_plot_2$Sub_metering_2, x = data_plot_2$Date_and_Time, col = "red")
 lines(y = data_plot_2$Sub_metering_3, x = data_plot_2$Date_and_Time, col = "blue")
-legend("topright", legend = c("Sub_metering_1", "sub_metering_2", "sub_metering_3"), col = c("black", "red", "blue"), lty = "1", lwd = "1")
+legend("topright", legend = c("Sub_metering_1", "sub_metering_2", "sub_metering_3"), col = c("black", "red", "blue"), lty = 1, lwd = 1)
